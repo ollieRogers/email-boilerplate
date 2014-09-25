@@ -2,6 +2,7 @@
  * These styles are for MOBILE ONLY and will be place in the <head> of the document
  */
 
+@import "variables.less";
 
 table td {border-collapse: collapse;}
 
@@ -28,12 +29,12 @@ table td {border-collapse: collapse;}
 }
 
 
-@media only screen and (max-width: 600px) {
-    //- responsively shrink table width under 600px
+@media only screen and (max-width: @maxWidth) {
+    //- responsively shrink table width under @maxWidth
     table {
         &.central-table {
             width:auto !important;
-            max-width:600px;
+            max-width:@maxWidth;
         }
     }
 

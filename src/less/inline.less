@@ -1,17 +1,5 @@
-//- Variables
 
-//- colors
-@brand-primary-color: tomato;
-@brand-secondary-color: DeepSkyBlue;
-@brand-dark-color: #101010 ;
-@brand-light-color: #efefef;
-@bg-color:white;
-
-//- fonts
-@brand-font-family: helvetica, arial, sans-serif;
-@brand-heading-font-family: @brand-font-family;
-@brand-body-font-family: @brand-font-family;
-
+@import "variables.less";
 
 
 
@@ -26,7 +14,7 @@ body {
     -ms-text-size-adjust:100%;
     margin:0;
     padding:0;
-    background-color:@brand-light-color;
+    background-color:@brand-secondary-color;
 }
 
 .ExternalClass {
@@ -42,7 +30,10 @@ body {
     line-height: 100%;
 }
 
-#contentTable, #footerTable, #headerTable {
+#contentTable,
+#footerTable,
+#headerTable,
+#barTable {
     margin:0;
     padding:0;
     width:100% !important;
@@ -53,14 +44,19 @@ body {
     background-color:@bg-color;
 }
 
+#barTable {
+    background-color:@brand-light-color;
+}
+
 #headerTable {
-    background-color:@bg-color;
-    border-bottom:2px solid @brand-secondary-color;
+    background-color:@brand-dark-color;
+    border-bottom:2px solid @brand-primary-color;
+    color: white;
 }
 
 table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;
     &.central-table {
-        width:600px;
+        width:@maxWidth;
     }
 }
 
@@ -99,10 +95,11 @@ img{
 
 
 /*
- * Typeography
+ * Typography
  */
 p {
      margin: 1em 0;
+     font-family:@brand-body-font-family;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -135,11 +132,57 @@ h6 {
     color:@brand-primary-color;
     font-size: 18px;
 }
-p {
-    color:@brand-dark-color;
-    font-family:@brand-body-font-family;
-    line-height:1.4em;
-    font-size: 18px;
+#contentTable {
+    p {
+        color:@brand-dark-color;
+        line-height:1.4em;
+        font-size: 18px;
+    }
+}
+#footerTable {
+    p {
+        color:@bg-color;
+        font-size: 14px;
+        line-height: 1.4em;
+    }
+}
+
+#headerTable {
+    p {
+        color:@bg-color;
+        text-align: center;
+        &.title {
+            font-size: 18px;
+        }
+    }
+}
+#barTable {
+    p {
+        text-align:right;
+        font-weight: bold;
+        color:@brand-primary-color;
+        a {
+            color:@brand-primary-color;
+            text-decoration:none;
+            font-size: 14px;
+        }
+    }
+}
+
+.center-button {
+    margin-bottom: 20px;
+    .button {
+        width: 150px;
+        background-color:@brand-primary-color;
+        a {
+            width: 100%;
+            display:block;
+            padding: 15px 0;
+            color:white;
+            text-align:center;
+            text-decoration:none;
+        }
+    }
 }
 
 a {
