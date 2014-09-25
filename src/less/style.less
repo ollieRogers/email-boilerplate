@@ -1,0 +1,71 @@
+/*
+ * These styles are for MOBILE ONLY and will be place in the <head> of the document
+ */
+
+
+table td {border-collapse: collapse;}
+
+
+@media only screen and (max-width: 480px) {
+
+
+  a[href^="tel"], a[href^="sms"] {
+        text-decoration: none;
+        color: black;
+        pointer-events: none;
+        cursor: default;
+      }
+
+  .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+        text-decoration: default;
+        color: orange !important;
+        pointer-events: auto;
+        cursor: default;
+      }
+
+
+
+}
+
+
+@media only screen and (max-width: 600px) {
+    //- responsively shrink table width under 600px
+    table {
+        &.central-table {
+            width:auto !important;
+            max-width:600px;
+        }
+    }
+
+}
+
+
+
+
+/*
+ * Tablet only
+ */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+
+
+  a[href^="tel"], a[href^="sms"] {
+        text-decoration: none;
+        color: blue;
+        pointer-events: none;
+        cursor: default;
+      }
+
+  .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+        text-decoration: default;
+        color: orange !important;
+        pointer-events: auto;
+        cursor: default;
+      }
+}
+
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  /* Retina */
+}

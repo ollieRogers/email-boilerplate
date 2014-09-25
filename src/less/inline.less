@@ -1,0 +1,152 @@
+//- Variables
+
+//- colors
+@brand-primary-color: tomato;
+@brand-secondary-color: DeepSkyBlue;
+@brand-dark-color: #101010 ;
+@brand-light-color: #efefef;
+@bg-color:white;
+
+//- fonts
+@brand-font-family: helvetica, arial, sans-serif;
+@brand-heading-font-family: @brand-font-family;
+@brand-body-font-family: @brand-font-family;
+
+
+
+
+
+/*
+ * Layout
+ */
+
+body {
+    width:100% !important;
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+    margin:0;
+    padding:0;
+    background-color:@brand-light-color;
+}
+
+.ExternalClass {
+    width:100%;
+}
+
+.ExternalClass,
+.ExternalClass p,
+.ExternalClass span,
+.ExternalClass font,
+.ExternalClass td,
+.ExternalClass div {
+    line-height: 100%;
+}
+
+#contentTable, #footerTable, #headerTable {
+    margin:0;
+    padding:0;
+    width:100% !important;
+    line-height: 100% !important;
+}
+
+#contentTable {
+    background-color:@bg-color;
+}
+
+#headerTable {
+    background-color:@bg-color;
+    border-bottom:2px solid @brand-secondary-color;
+}
+
+table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;
+    &.central-table {
+        width:600px;
+    }
+}
+
+
+
+
+/*
+ * Images
+ */
+img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;
+    a & {border:none;}
+}
+
+.image_fix {
+    display:block;
+}
+
+img{
+    &.full-width {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    &.right {
+        float: right;
+        margin-left: 10px;
+    }
+    &.left {
+        float: left;
+        margin-right: 10px;
+    }
+}
+
+
+
+
+
+/*
+ * Typeography
+ */
+p {
+     margin: 1em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family:@brand-heading-font-family;
+  a {
+    color: @brand-primary-color !important;
+    }
+}
+h1 {
+    color: @brand-secondary-color;
+    font-size:30px
+}
+h2 {
+    color: @brand-primary-color;
+    font-size:26px
+}
+h3 {
+    color: @brand-primary-color;
+    font-size:22px
+}
+h4 {
+    color:@brand-primary-color;
+    font-size:18px
+}
+h5 {
+    color:@brand-primary-color;
+    font-size: 18px;
+}
+h6 {
+    color:@brand-primary-color;
+    font-size: 18px;
+}
+p {
+    color:@brand-dark-color;
+    font-family:@brand-body-font-family;
+    line-height:1.4em;
+    font-size: 18px;
+}
+
+a {
+    color: @brand-primary-color;
+    font-family:@brand-body-font-family;
+}
+
+#outlook a {
+    padding:0;
+}
