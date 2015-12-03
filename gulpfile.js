@@ -60,8 +60,8 @@ gulp.task('serve', ['emailBuilder', 'writeIndex'], function() {
         }
     });
 
-    gulp.watch("./src/html/**/*.html").on('change', browserSync.reload);
-    gulp.watch("./src/css/**/*.css").on('change', browserSync.reload);
+    gulp.watch("./src/html/**/*.html" , [ 'emailBuilder' , browserSync.reload]);
+    gulp.watch("./src/css/**/*.css" , ['emailBuilder' , browserSync.reload]);
 });
 
 
